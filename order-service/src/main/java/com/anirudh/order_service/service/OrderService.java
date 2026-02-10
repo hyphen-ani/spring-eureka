@@ -35,7 +35,7 @@ public class OrderService {
 
         //TODO: REST CALL
 
-        Payment paymentResponse = restTemplate.postForObject("http://PAYMENT-SERVICE/payment/doPayment", payment, Payment.class);
+        Payment paymentResponse = restTemplate.postForObject("http://payment-service/payment/doPayment", payment, Payment.class);
         response = paymentResponse.getPaymentStatus().equals("Success") ? "Payment Processing Successfull" : "Failed Payment API, Added Order In Cart";
 
         orderRepository.save(order);

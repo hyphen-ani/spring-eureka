@@ -3,10 +3,12 @@ package com.anirudh.payment_service.controller;
 import com.anirudh.payment_service.entity.Payment;
 import com.anirudh.payment_service.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/payment")
+@EnableDiscoveryClient
 public class PaymentController {
 
     @Autowired
